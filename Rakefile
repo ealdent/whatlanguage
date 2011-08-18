@@ -1,17 +1,16 @@
-# -*- ruby -*-
-
 require 'rubygems'
-require 'hoe'
-require './lib/whatlanguage.rb'
+require 'rake'
+require 'yaml'
 
-Hoe.new('whatlanguage', WhatLanguage::VERSION) do |p|
-  p.rubyforge_name = 'whatlanguage'
-  p.author = 'Peter Cooper'
-  p.email = 'whatlanguage@peterc.org'
-  p.summary = 'Fast, quick, textual language detection'
-  p.description = p.paragraphs_of('README.txt', 2..5).join("\n\n")
-  p.url = "http://rubyforge.org/projects/whatlanguage/"
-  p.changes = p.paragraphs_of('History.txt', 0..1).join("\n\n")
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "ealdent-whatlanguage"
+    gem.summary = %Q{Fast, quick, textual language detection}
+    gem.description = %{ Text language detection. Quick, fast, memory efficient, and all in pure Ruby. Uses Bloom filters for aforementioned speed and memory benefits. Works with English, French, German, and Spanish out of the box. }
+    gem.email = ['whatlanguage@peterc.org', "jasonmadams@gmail.com"]
+    gem.homepage = "http://github.com/ealdent/whatlanguage"
+    gem.authors = ['Peter Cooper', 'Jason Adams']
+    gem.require_paths = ['lib']
+  end
 end
-
-# vim: syntax=Ruby

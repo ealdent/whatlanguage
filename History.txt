@@ -1,3 +1,9 @@
+== 1.1.0 / 2011-08-18
+
+* Use n-gram corpora from Google for French, German, Spanish, and English
+* Discard other corpora to prevent false positives
+* Increase size of bloom filters
+
 == 1.0.1 / 2008-08-22
 
 * Public release
