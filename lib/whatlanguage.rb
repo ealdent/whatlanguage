@@ -6,7 +6,7 @@ class WhatLanguage
   
   HASHER = lambda { |item| Digest::SHA1.digest(item.downcase.strip).unpack("VV") }
   
-  BITFIELD_WIDTH = 2_000_000
+  BITFIELD_WIDTH = 65_000_000
   
   @@data = {}
   
